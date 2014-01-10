@@ -1,6 +1,6 @@
 #HY-360 project
 
-**Vaggelis Loutsetis (@vagonar), Irini Stavroulaki(@stavrul), Michalis Katsarakis (@mkats)**
+**Vaggelis Loutsetis ([vagonar](https://github.com/vagonar)), Irini Stavroulaki([stavrul](https://github.com/stavrul)), Michalis Katsarakis ([mkats](https://github.com/mkats))**
 
 
 ##Abstract
