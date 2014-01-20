@@ -5,14 +5,16 @@ body
 	color: #555;
 	font: normal 10pt Arial,Helvetica,sans-serif;
 	background: #EFEFEF;
+	background-image: url('../images/Vouli_2_new.jpg');
 }
 
 #page
 {
 	margin-top: 5px;
 	margin-bottom: 5px;
-	background: white;
 	border: 1px solid #C9E0ED;
+	background: rgb(244,239,229) /*white*/;
+	opacity: 0.85;
 }
 
 #header
