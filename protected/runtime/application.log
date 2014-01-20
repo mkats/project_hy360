@@ -1,0 +1,16 @@
+2014/01/20 22:05:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii/".' in C:\xampp\htdocs\sites\yii-1.1.14.f0fee9\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\sites\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/')
+#1 C:\xampp\htdocs\sites\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sites\project_hy360\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/project_hy360/index.php?r=gii/
+---
+2014/01/20 22:05:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii/".' in C:\xampp\htdocs\sites\yii-1.1.14.f0fee9\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\sites\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/')
+#1 C:\xampp\htdocs\sites\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sites\project_hy360\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/project_hy360/index.php?r=gii/
+---
