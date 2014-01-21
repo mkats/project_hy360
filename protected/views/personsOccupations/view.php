@@ -22,6 +22,7 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'persons_occupations_id',
+		'occupation',
 		'subject',
 		'person_id',
 		array(

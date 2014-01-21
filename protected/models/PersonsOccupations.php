@@ -7,6 +7,7 @@
  * @property string $persons_occupations_id
  * @property string $subject
  * @property string $person_id
+ * @property string $occupation
  *
  * The followings are the available model relations:
  * @property Persons $person
@@ -29,11 +30,11 @@ class PersonsOccupations extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('subject', 'length', 'max'=>100),
+			array('subject, occupation', 'length', 'max'=>100),
 			array('person_id', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('persons_occupations_id, subject, person_id', 'safe', 'on'=>'search'),
+			array('persons_occupations_id, subject, person_id, occupation', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -58,6 +59,7 @@ class PersonsOccupations extends CActiveRecord
 			'persons_occupations_id' => 'Persons Occupations',
 			'subject' => 'The subject category of this occupation',
 			'person_id' => 'Person',
+			'occupation' => 'Occupation',
 		);
 	}
 
@@ -82,6 +84,7 @@ class PersonsOccupations extends CActiveRecord
 		$criteria->compare('persons_occupations_id',$this->persons_occupations_id,true);
 		$criteria->compare('subject',$this->subject,true);
 		$criteria->compare('person_id',$this->person_id,true);
+		$criteria->compare('occupation',$this->occupation,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

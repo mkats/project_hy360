@@ -4,6 +4,14 @@
 /* @var $form CActiveForm */
 ?>
 
+<?php
+		// retrieve all persons
+		$criteria = new CDbCriteria;
+		$criteria->order = 'name ASC';
+		$persons = Persons::model()->findAll($criteria);
+		$data['persons'] = CHtml::listData($persons, 'person_id', 'name');
+		?>
+
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -14,19 +22,17 @@
 	// See class documentation of CActiveForm for details on this.
 	'enableAjaxValidation'=>false,
 )); ?>
-	
-	<?php
-		// retrieve all persons
-		$criteria = new CDbCriteria;
-		$criteria->order = 'name ASC';
-		$persons = Persons::model()->findAll($criteria);
-		$data['persons'] = CHtml::listData($persons, 'person_id', 'name');
-		?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
+	<div class="row">
+		<?php echo $form->labelEx($model,'occupation'); ?>
+		<?php echo $form->textField($model,'occupation',array('size'=>60,'maxlength'=>100)); ?>
+		<?php echo $form->error($model,'occupation'); ?>
+	</div>
+	
 	<div class="row">
 		<?php echo $form->labelEx($model,'subject'); ?>
 		<?php echo $form->textField($model,'subject',array('size'=>60,'maxlength'=>100)); ?>
