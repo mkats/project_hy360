@@ -26,5 +26,10 @@ $this->menu=array(
 		'start_timestamp',
 		'end_timestamp',
 		'minister_id',
+		array(
+					'label' => "Person name",
+					'type' => "raw",
+					'value' => CHtml::link($model->minister->person->name, $this->createAbsoluteUrl('persons/view', array('id'=>$model->minister->person_id)))
+			),
 	),
 )); ?>

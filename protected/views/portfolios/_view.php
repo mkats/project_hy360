@@ -24,6 +24,10 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('minister_id')); ?>:</b>
 	<?php echo CHtml::encode($data->minister_id); ?>
 	<br />
+	
+	<b><?php echo CHtml::encode($data->getAttributeLabel('person.name')); ?>:</b>
+	<?php echo CHtml::link($data->minister->person->name, $this->createAbsoluteUrl('persons/view', array('id'=>$data->minister->person_id))) ?>
+	<br />
 
 
 </div>
