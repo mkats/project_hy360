@@ -24,5 +24,10 @@ $this->menu=array(
 		'parliament_session_id',
 		'timestamp',
 		'parliament_cycle_id',
+		array(
+				'label' => "Parliament cycle title",
+				'type' => "raw",
+				'value' => CHtml::link($model->parliamentCycle->title, $this->createAbsoluteUrl('parliamentCycles/view', array('id'=>$model->parliament_cycle_id)))
+			),
 	),
 )); ?>
