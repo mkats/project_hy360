@@ -40,12 +40,3 @@
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->
-
-<!--
-<select>
-	<?php/*
-	foreach ($query_result as $person)
-		echo('<option value="'.$person->person_id.'">'.$person->name.'</option>');
-	*/?>
-</select>
--->

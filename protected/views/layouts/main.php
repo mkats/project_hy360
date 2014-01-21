@@ -48,9 +48,13 @@
 	<div class="clear"></div>
 
 	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
-		All Rights Reserved.<br/>
-		<?php echo Yii::powered(); ?>
+		Created by
+		<a href="https://github.com/vagonar">Vaggelis Loutsetis</a>,
+		<a href="https://github.com/stavrul">Irini Stavroulaki</a>, and
+		<a href="https://github.com/mkats">Michalis Katsarakis</a><br/>
+		for the needs of the course <a href="http://www.csd.uoc.gr/~hy360/">HY-360 "Files and Databases"</a>.</br>
+		Source code available at <a href="https://github.com/mkats/project_hy360">GitHub</a>.
+		
 	</div><!-- footer -->
 
 </div><!-- page -->
