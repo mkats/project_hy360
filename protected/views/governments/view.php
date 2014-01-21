@@ -23,5 +23,6 @@ $this->menu=array(
 	'attributes'=>array(
 		'government_id',
 		'parliament_cycle_id',
+		'prime_minister_id',
 	),
 )); ?>

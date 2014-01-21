@@ -13,5 +13,9 @@
 	<?php echo CHtml::encode($data->parliament_cycle_id); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('prime_minister_id')); ?>:</b>
+	<?php echo CHtml::encode($data->prime_minister_id); ?>
+	<br />
+
 
 </div>

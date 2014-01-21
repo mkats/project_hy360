@@ -22,7 +22,6 @@ echo '<li>'; echo CHtml::link('Persons', $this->createAbsoluteUrl('Persons/index
 echo '<li>'; echo CHtml::link('AnsweredBy', $this->createAbsoluteUrl('AnsweredBy/index')); echo '</li>';
 echo '<li>'; echo CHtml::link('Belongs', $this->createAbsoluteUrl('Belongs/index')); echo '</li>';
 echo '<li>'; echo CHtml::link('Elected', $this->createAbsoluteUrl('Elected/index')); echo '</li>';
-echo '<li>'; echo CHtml::link('GovernmentHasPrimeMinister', $this->createAbsoluteUrl('GovernmentHasPrimeMinister/index')); echo '</li>';
 echo '<li>'; echo CHtml::link('Governments', $this->createAbsoluteUrl('Governments/index')); echo '</li>';
 echo '<li>'; echo CHtml::link('Interpellations', $this->createAbsoluteUrl('Interpellations/index')); echo '</li>';
 echo '<li>'; echo CHtml::link('Leads', $this->createAbsoluteUrl('Leads/index')); echo '</li>';

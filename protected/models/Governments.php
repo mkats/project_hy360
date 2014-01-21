@@ -6,9 +6,10 @@
  * The followings are the available columns in table 'governments':
  * @property string $government_id
  * @property string $parliament_cycle_id
+ * @property string $prime_minister_id
  *
  * The followings are the available model relations:
- * @property GovernmentHasPrimeMinister[] $governmentHasPrimeMinisters
+ * @property PrimeMinisters $primeMinister
  * @property ParliamentCycles $parliamentCycle
  * @property MinisterParticipatesGovernment[] $ministerParticipatesGovernments
  * @property PartyParticipatesGovernment[] $partyParticipatesGovernments
@@ -31,10 +32,10 @@ class Governments extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('parliament_cycle_id', 'length', 'max'=>10),
+			array('parliament_cycle_id, prime_minister_id', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('government_id, parliament_cycle_id', 'safe', 'on'=>'search'),
+			array('government_id, parliament_cycle_id, prime_minister_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -46,7 +47,7 @@ class Governments extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'governmentHasPrimeMinisters' => array(self::HAS_MANY, 'GovernmentHasPrimeMinister', 'government_id'),
+			'primeMinister' => array(self::BELONGS_TO, 'PrimeMinisters', 'prime_minister_id'),
 			'parliamentCycle' => array(self::BELONGS_TO, 'ParliamentCycles', 'parliament_cycle_id'),
 			'ministerParticipatesGovernments' => array(self::HAS_MANY, 'MinisterParticipatesGovernment', 'government_id'),
 			'partyParticipatesGovernments' => array(self::HAS_MANY, 'PartyParticipatesGovernment', 'government_id'),
@@ -61,6 +62,7 @@ class Governments extends CActiveRecord
 		return array(
 			'government_id' => 'Government',
 			'parliament_cycle_id' => 'Parliament Cycle',
+			'prime_minister_id' => 'Prime Minister',
 		);
 	}
 
@@ -84,6 +86,7 @@ class Governments extends CActiveRecord
 
 		$criteria->compare('government_id',$this->government_id,true);
 		$criteria->compare('parliament_cycle_id',$this->parliament_cycle_id,true);
+		$criteria->compare('prime_minister_id',$this->prime_minister_id,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

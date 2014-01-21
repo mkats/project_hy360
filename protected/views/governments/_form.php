@@ -25,6 +25,12 @@
 		<?php echo $form->error($model,'parliament_cycle_id'); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->labelEx($model,'prime_minister_id'); ?>
+		<?php echo $form->textField($model,'prime_minister_id',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->error($model,'prime_minister_id'); ?>
+	</div>
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>

@@ -47,6 +47,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'columns'=>array(
 		'government_id',
 		'parliament_cycle_id',
+		'prime_minister_id',
 		array(
 			'class'=>'CButtonColumn',
 		),
