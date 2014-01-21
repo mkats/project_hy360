@@ -14,6 +14,22 @@
 	// See class documentation of CActiveForm for details on this.
 	'enableAjaxValidation'=>false,
 )); ?>
+	
+	<?php
+		// retrieve all parties
+		$criteria = new CDbCriteria;
+		$criteria->order = 'name ASC';
+		$parties = Parties::model()->findAll($criteria);
+		$data['parties'] = CHtml::listData($parties, 'party_id', 'name');
+		
+		// retrieve all parliament_cycles
+		$criteria = new CDbCriteria;
+		$criteria->order = 'title ASC';
+		$parliament_cycles = ParliamentCycles::model()->findAll($criteria);
+		$data['parliament_cycles'] = CHtml::listData($parliament_cycles, 'parliament_cycle_id', 'title');
+		
+		
+		?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
@@ -21,13 +37,13 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'party_id'); ?>
-		<?php echo $form->textField($model,'party_id',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->dropDownList($model,'party_id', $data['parties'], array('prompt'=>'Select party')); ?>
 		<?php echo $form->error($model,'party_id'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'parliament_cycle_id'); ?>
-		<?php echo $form->textField($model,'parliament_cycle_id',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->dropDownList($model,'parliament_cycle_id', $data['parliament_cycles'], array('prompt'=>'Select parliament cycle')); ?>
 		<?php echo $form->error($model,'parliament_cycle_id'); ?>
 	</div>
 
