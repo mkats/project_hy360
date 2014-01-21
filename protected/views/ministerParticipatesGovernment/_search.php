@@ -26,6 +26,16 @@
 		<?php echo $form->textField($model,'government_id',array('size'=>10,'maxlength'=>10)); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->label($model,'start_timestamp'); ?>
+		<?php echo $form->textField($model,'start_timestamp'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'end_timestamp'); ?>
+		<?php echo $form->textField($model,'end_timestamp'); ?>
+	</div>
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Search'); ?>
 	</div>

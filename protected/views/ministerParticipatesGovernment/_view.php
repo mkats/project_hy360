@@ -17,5 +17,13 @@
 	<?php echo CHtml::encode($data->government_id); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('start_timestamp')); ?>:</b>
+	<?php echo CHtml::encode($data->start_timestamp); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('end_timestamp')); ?>:</b>
+	<?php echo CHtml::encode($data->end_timestamp); ?>
+	<br />
+
 
 </div>

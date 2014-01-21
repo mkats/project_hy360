@@ -7,10 +7,12 @@
  * @property string $minister_participates_government_id
  * @property string $minister_id
  * @property string $government_id
+ * @property string $start_timestamp
+ * @property string $end_timestamp
  *
  * The followings are the available model relations:
- * @property Ministers $minister
  * @property Governments $government
+ * @property Ministers $minister
  */
 class MinisterParticipatesGovernment extends CActiveRecord
 {
@@ -31,9 +33,10 @@ class MinisterParticipatesGovernment extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('minister_id, government_id', 'length', 'max'=>10),
+			array('start_timestamp, end_timestamp', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('minister_participates_government_id, minister_id, government_id', 'safe', 'on'=>'search'),
+			array('minister_participates_government_id, minister_id, government_id, start_timestamp, end_timestamp', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -45,8 +48,8 @@ class MinisterParticipatesGovernment extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'minister' => array(self::BELONGS_TO, 'Ministers', 'minister_id'),
 			'government' => array(self::BELONGS_TO, 'Governments', 'government_id'),
+			'minister' => array(self::BELONGS_TO, 'Ministers', 'minister_id'),
 		);
 	}
 
@@ -59,6 +62,8 @@ class MinisterParticipatesGovernment extends CActiveRecord
 			'minister_participates_government_id' => 'Minister Participates Government',
 			'minister_id' => 'Minister',
 			'government_id' => 'Government',
+			'start_timestamp' => 'Start Timestamp',
+			'end_timestamp' => 'End Timestamp',
 		);
 	}
 
@@ -83,6 +88,8 @@ class MinisterParticipatesGovernment extends CActiveRecord
 		$criteria->compare('minister_participates_government_id',$this->minister_participates_government_id,true);
 		$criteria->compare('minister_id',$this->minister_id,true);
 		$criteria->compare('government_id',$this->government_id,true);
+		$criteria->compare('start_timestamp',$this->start_timestamp,true);
+		$criteria->compare('end_timestamp',$this->end_timestamp,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

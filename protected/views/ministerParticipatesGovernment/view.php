@@ -24,5 +24,7 @@ $this->menu=array(
 		'minister_participates_government_id',
 		'minister_id',
 		'government_id',
+		'start_timestamp',
+		'end_timestamp',
 	),
 )); ?>
