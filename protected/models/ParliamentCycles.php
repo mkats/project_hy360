@@ -6,6 +6,8 @@
  * The followings are the available columns in table 'parliament_cycles':
  * @property string $parliament_cycle_id
  * @property string $title
+ * @property string $start_timestamp
+ * @property string $end_timestamp
  *
  * The followings are the available model relations:
  * @property Elected[] $electeds
@@ -32,9 +34,10 @@ class ParliamentCycles extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('title', 'length', 'max'=>150),
+			array('start_timestamp, end_timestamp', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('parliament_cycle_id, title', 'safe', 'on'=>'search'),
+			array('parliament_cycle_id, title, start_timestamp, end_timestamp', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -61,6 +64,8 @@ class ParliamentCycles extends CActiveRecord
 		return array(
 			'parliament_cycle_id' => 'Parliament Cycle',
 			'title' => 'Title',
+			'start_timestamp' => 'Start Timestamp',
+			'end_timestamp' => 'End Timestamp',
 		);
 	}
 
@@ -84,6 +89,8 @@ class ParliamentCycles extends CActiveRecord
 
 		$criteria->compare('parliament_cycle_id',$this->parliament_cycle_id,true);
 		$criteria->compare('title',$this->title,true);
+		$criteria->compare('start_timestamp',$this->start_timestamp,true);
+		$criteria->compare('end_timestamp',$this->end_timestamp,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

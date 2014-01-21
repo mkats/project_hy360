@@ -47,6 +47,8 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'columns'=>array(
 		'parliament_cycle_id',
 		'title',
+		'start_timestamp',
+		'end_timestamp',
 		array(
 			'class'=>'CButtonColumn',
 		),

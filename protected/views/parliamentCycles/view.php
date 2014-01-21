@@ -23,5 +23,7 @@ $this->menu=array(
 	'attributes'=>array(
 		'parliament_cycle_id',
 		'title',
+		'start_timestamp',
+		'end_timestamp',
 	),
 )); ?>

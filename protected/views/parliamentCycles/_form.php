@@ -25,6 +25,18 @@
 		<?php echo $form->error($model,'title'); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->labelEx($model,'start_timestamp'); ?>
+		<?php echo $form->textField($model,'start_timestamp'); ?>
+		<?php echo $form->error($model,'start_timestamp'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'end_timestamp'); ?>
+		<?php echo $form->textField($model,'end_timestamp'); ?>
+		<?php echo $form->error($model,'end_timestamp'); ?>
+	</div>
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>
