@@ -12,9 +12,17 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('mp_id')); ?>:</b>
 	<?php echo CHtml::encode($data->mp_id); ?>
 	<br />
+	
+	<b><?php echo CHtml::encode($data->getAttributeLabel('person.name')); ?>:</b>
+	<?php echo CHtml::link($data->mp->person->name, $this->createAbsoluteUrl('persons/view', array('id'=>$data->mp->person_id))) ?>
+	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('parliament_cycle_id')); ?>:</b>
 	<?php echo CHtml::encode($data->parliament_cycle_id); ?>
+	<br />
+	
+	<b><?php echo CHtml::encode($data->getAttributeLabel('parliamentCycle.title')); ?>:</b>
+	<?php echo CHtml::link($data->parliamentCycle->title, $this->createAbsoluteUrl('parliamentCycles/view', array('id'=>$data->parliament_cycle_id))) ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('constituency')); ?>:</b>
