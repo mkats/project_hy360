@@ -23,5 +23,11 @@ $this->menu=array(
 	'attributes'=>array(
 		'prime_minister_id',
 		'person_id',
+		array(
+                        'label' => "Person name",
+						'type' => "raw",
+                        'value' => CHtml::link($model->person->name, $this->createAbsoluteUrl('persons/view', array('id'=>$model->person_id)))
+                ),
+
 	),
 )); ?>

@@ -18,7 +18,6 @@ $this->pageTitle=Yii::app()->name;
 <ul>
 <?php
 //echo CHtml::link('Persons', $this->createAbsoluteUrl('persons/index',array('id'=>1)));
-echo '<li>'; echo CHtml::link('Persons', $this->createAbsoluteUrl('Persons/index')); echo '</li>';
 echo '<li>'; echo CHtml::link('AnsweredBy', $this->createAbsoluteUrl('AnsweredBy/index')); echo '</li>';
 echo '<li>'; echo CHtml::link('Belongs', $this->createAbsoluteUrl('Belongs/index')); echo '</li>';
 echo '<li>'; echo CHtml::link('Elected', $this->createAbsoluteUrl('Elected/index')); echo '</li>';
@@ -34,6 +33,7 @@ echo '<li>'; echo CHtml::link('Participate', $this->createAbsoluteUrl('Participa
 echo '<li>'; echo CHtml::link('Parties', $this->createAbsoluteUrl('Parties/index')); echo '</li>';
 echo '<li>'; echo CHtml::link('PartyLeaders', $this->createAbsoluteUrl('PartyLeaders/index')); echo '</li>';
 echo '<li>'; echo CHtml::link('PartyParticipatesGovernment', $this->createAbsoluteUrl('PartyParticipatesGovernment/index')); echo '</li>';
+echo '<li>'; echo CHtml::link('Persons', $this->createAbsoluteUrl('Persons/index')); echo '</li>';
 echo '<li>'; echo CHtml::link('PersonsOccupations', $this->createAbsoluteUrl('PersonsOccupations/index')); echo '</li>';
 echo '<li>'; echo CHtml::link('Portfolios', $this->createAbsoluteUrl('Portfolios/index')); echo '</li>';
 echo '<li>'; echo CHtml::link('PrimeMinisters', $this->createAbsoluteUrl('PrimeMinisters/index')); echo '</li>';
