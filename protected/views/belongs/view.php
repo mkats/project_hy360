@@ -23,7 +23,17 @@ $this->menu=array(
 	'attributes'=>array(
 		'belongs_id',
 		'mp_id',
+		array(
+				'label' => "Person name",
+				'type' => "raw",
+				'value' => CHtml::link($model->mp->person->name, $this->createAbsoluteUrl('mps/view', array('id'=>$model->mp_id)))
+			),
 		'party_id',
+		array(
+				'label' => "Party name",
+				'type' => "raw",
+				'value' => CHtml::link($model->party->name, $this->createAbsoluteUrl('parties/view', array('id'=>$model->party_id)))
+			),
 		'start_timestamp',
 		'end_timestamp',
 	),
