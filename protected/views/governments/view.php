@@ -23,6 +23,16 @@ $this->menu=array(
 	'attributes'=>array(
 		'government_id',
 		'parliament_cycle_id',
+		array(
+				'label' => "Parliament cycle title",
+				'type' => "raw",
+				'value' => CHtml::link($model->parliamentCycle->title, $this->createAbsoluteUrl('parliamentCycles/view', array('id'=>$model->parliament_cycle_id)))
+			),
 		'prime_minister_id',
+		array(
+				'label' => "Prime minister name",
+				'type' => "raw",
+				'value' => CHtml::link($model->primeMinister->person->name, $this->createAbsoluteUrl('primeMinisters/view', array('id'=>$model->prime_minister_id)))
+			),
 	),
 )); ?>
