@@ -24,6 +24,7 @@
 
 	<div id="header">
 		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
+		<?php $this->widget('LangBox'); ?>
 	</div><!-- header -->
 
 	<div id="mainmenu">

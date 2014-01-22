@@ -49,6 +49,23 @@ body
 	font-size: 200%;
 }
 
+#langdrop
+{
+	float:right;
+	position: relative;
+	top:5px; right: 5px;
+	/*top:-35px; right:20px;*/
+	font-size: small;
+	color:white;
+}
+#langdrop select {
+	/*background: rgb(244,239,229);*/
+	background:white url(bg.gif) repeat-x left top;
+	border:1px solid #6FACCF;
+	font-size: small;
+	/*color:#666;*/
+}
+
 #mainmenu
 {
 	background:white url(bg.gif) repeat-x left top;
