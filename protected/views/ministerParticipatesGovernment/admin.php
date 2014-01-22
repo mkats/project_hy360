@@ -47,6 +47,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'columns'=>array(
 		'minister_participates_government_id',
 		'minister_id',
+		"minister.person.name",
 		'government_id',
 		'start_timestamp',
 		'end_timestamp',

@@ -12,9 +12,17 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('minister_id')); ?>:</b>
 	<?php echo CHtml::encode($data->minister_id); ?>
 	<br />
+	
+	<b><?php echo CHtml::encode($data->getAttributeLabel('Minister Name')); ?>:</b>
+	<?php echo CHtml::link($data->minister->person->name, $this->createAbsoluteUrl('ministers/view', array('id'=>$data->minister_id))) ?>
+	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('government_id')); ?>:</b>
 	<?php echo CHtml::encode($data->government_id); ?>
+	<br />
+	
+	<b><?php echo CHtml::encode($data->getAttributeLabel('government_id')); ?>:</b>
+	<?php echo CHtml::link($data->government->government_id, $this->createAbsoluteUrl('governments/view', array('id'=>$data->government_id))) ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('start_timestamp')); ?>:</b>

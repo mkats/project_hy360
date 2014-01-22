@@ -23,7 +23,17 @@ $this->menu=array(
 	'attributes'=>array(
 		'minister_participates_government_id',
 		'minister_id',
+		array(
+				'label' => "Minister name",
+				'type' => "raw",
+				'value' => CHtml::link($model->minister->person->name, $this->createAbsoluteUrl('ministers/view', array('id'=>$model->minister_id)))
+			),
 		'government_id',
+		array(
+				'label' => "Government",
+				'type' => "raw",
+				'value' => CHtml::link($model->government_id, $this->createAbsoluteUrl('governments/view', array('id'=>$model->government_id)))
+			),
 		'start_timestamp',
 		'end_timestamp',
 	),

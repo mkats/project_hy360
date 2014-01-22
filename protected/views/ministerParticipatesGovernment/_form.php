@@ -14,6 +14,21 @@
 	// See class documentation of CActiveForm for details on this.
 	'enableAjaxValidation'=>false,
 )); ?>
+	
+	<?php
+		// retrieve all ministers
+		$criteria = new CDbCriteria;
+		//$criteria->order = 'name ASC';
+		$ministers = Ministers::model()->findAll($criteria);
+		$data['ministers'] = CHtml::listData($ministers, 'minister_id', 'person.name');
+		
+		// retrieve all governments
+		$criteria = new CDbCriteria;
+		//$criteria->order = 'name ASC';
+		$governments = Governments::model()->findAll($criteria);
+		$data['governments'] = CHtml::listData($governments, 'government_id', 'government_id');
+		
+		?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
@@ -21,13 +36,13 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'minister_id'); ?>
-		<?php echo $form->textField($model,'minister_id',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->dropDownList($model,'minister_id', $data['ministers'], array('prompt'=>'Select minister')); ?>
 		<?php echo $form->error($model,'minister_id'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'government_id'); ?>
-		<?php echo $form->textField($model,'government_id',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->dropDownList($model,'government_id', $data['governments'], array('prompt'=>'Select government')); ?>
 		<?php echo $form->error($model,'government_id'); ?>
 	</div>
 
