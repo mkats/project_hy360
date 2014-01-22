@@ -14,6 +14,20 @@
 	// See class documentation of CActiveForm for details on this.
 	'enableAjaxValidation'=>false,
 )); ?>
+	
+	<?php
+		// retrieve all parliament_sessions
+		$criteria = new CDbCriteria;
+		//$criteria->order = 'name ASC';
+		$parliament_sessions = ParliamentSessions::model()->findAll($criteria);
+		$data['parliament_sessions'] = CHtml::listData($parliament_sessions, 'parliament_session_id', 'timestamp');
+	
+		// retrieve all MPs
+		$criteria = new CDbCriteria;
+		//$criteria->order = 'name ASC';
+		$mps = Mps::model()->findAll($criteria);
+		$data['mps'] = CHtml::listData($mps, 'mp_id', 'person.name');
+		?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
@@ -39,13 +53,13 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'parliament_session_id'); ?>
-		<?php echo $form->textField($model,'parliament_session_id',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->dropDownList($model,'parliament_session_id', $data['parliament_sessions'], array('prompt'=>'Select parliament session')); ?>
 		<?php echo $form->error($model,'parliament_session_id'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'mp_id'); ?>
-		<?php echo $form->textField($model,'mp_id',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->dropDownList($model,'mp_id', $data['mps'], array('prompt'=>'Select MP')); ?>
 		<?php echo $form->error($model,'mp_id'); ?>
 	</div>
 

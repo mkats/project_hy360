@@ -50,7 +50,9 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'category',
 		'timestamp',
 		'parliament_session_id',
+		"parliament_session.date",
 		'mp_id',
+		"mp.person.name",
 		array(
 			'class'=>'CButtonColumn',
 		),

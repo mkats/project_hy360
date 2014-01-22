@@ -16,7 +16,7 @@
 )); ?>
 	
 	<?php
-		// retrieve all persons
+		// retrieve all MPs
 		$criteria = new CDbCriteria;
 		//$criteria->order = 'name ASC';
 		$mps = Mps::model()->findAll($criteria);

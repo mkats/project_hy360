@@ -26,6 +26,16 @@ $this->menu=array(
 		'category',
 		'timestamp',
 		'parliament_session_id',
+		array(
+				'label' => "Parliament session date",
+				'type' => "raw",
+				'value' => CHtml::link($model->parliamentSession->timestamp, $this->createAbsoluteUrl('parliamentSessions/view', array('id'=>$model->parliament_session_id)))
+			),
 		'mp_id',
+		array(
+				'label' => "MP name",
+				'type' => "raw",
+				'value' => CHtml::link($model->mp->person->name, $this->createAbsoluteUrl('mps/view', array('id'=>$model->mp_id)))
+			),
 	),
 )); ?>
