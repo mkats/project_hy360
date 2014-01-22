@@ -23,6 +23,16 @@ $this->menu=array(
 	'attributes'=>array(
 		'party_participates_government_id',
 		'party_id',
+		array(
+				'label' => "Party name",
+				'type' => "raw",
+				'value' => CHtml::link($model->party->name, $this->createAbsoluteUrl('parties/view', array('id'=>$model->party_id)))
+			),
 		'government_id',
+		array(
+				'label' => "Government",
+				'type' => "raw",
+				'value' => CHtml::link($model->government_id, $this->createAbsoluteUrl('governments/view', array('id'=>$model->government_id)))
+			),
 	),
 )); ?>
