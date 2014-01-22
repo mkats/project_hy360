@@ -8,10 +8,11 @@
  * @property string $interpellation_id
  * @property string $minister_id
  * @property string $timestamp
+ * @property string $answer
  *
  * The followings are the available model relations:
- * @property Ministers $minister
  * @property Interpellations $interpellation
+ * @property Ministers $minister
  */
 class AnsweredBy extends CActiveRecord
 {
@@ -32,10 +33,11 @@ class AnsweredBy extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('interpellation_id, minister_id', 'length', 'max'=>10),
+			array('answer', 'length', 'max'=>300),
 			array('timestamp', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('answered_by_id, interpellation_id, minister_id, timestamp', 'safe', 'on'=>'search'),
+			array('answered_by_id, interpellation_id, minister_id, timestamp, answer', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -47,8 +49,8 @@ class AnsweredBy extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'minister' => array(self::BELONGS_TO, 'Ministers', 'minister_id'),
 			'interpellation' => array(self::BELONGS_TO, 'Interpellations', 'interpellation_id'),
+			'minister' => array(self::BELONGS_TO, 'Ministers', 'minister_id'),
 		);
 	}
 
@@ -62,6 +64,7 @@ class AnsweredBy extends CActiveRecord
 			'interpellation_id' => 'Interpellation',
 			'minister_id' => 'Minister',
 			'timestamp' => 'Timestamp',
+			'answer' => 'Answer',
 		);
 	}
 
@@ -87,6 +90,7 @@ class AnsweredBy extends CActiveRecord
 		$criteria->compare('interpellation_id',$this->interpellation_id,true);
 		$criteria->compare('minister_id',$this->minister_id,true);
 		$criteria->compare('timestamp',$this->timestamp,true);
+		$criteria->compare('answer',$this->answer,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

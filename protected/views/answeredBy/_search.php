@@ -31,6 +31,11 @@
 		<?php echo $form->textField($model,'timestamp'); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->label($model,'answer'); ?>
+		<?php echo $form->textField($model,'answer',array('size'=>60,'maxlength'=>300)); ?>
+	</div>
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Search'); ?>
 	</div>

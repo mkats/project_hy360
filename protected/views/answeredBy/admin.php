@@ -47,8 +47,11 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'columns'=>array(
 		'answered_by_id',
 		'interpellation_id',
+		"interpellation.description",
 		'minister_id',
+		"minister.person.name",
 		'timestamp',
+		'answer',
 		array(
 			'class'=>'CButtonColumn',
 		),

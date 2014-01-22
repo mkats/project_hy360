@@ -23,7 +23,18 @@ $this->menu=array(
 	'attributes'=>array(
 		'answered_by_id',
 		'interpellation_id',
+		array(
+				'label' => "Description",
+				'type' => "raw",
+				'value' => CHtml::link($model->interpellation->description, $this->createAbsoluteUrl('interpellations/view', array('id'=>$model->interpellation_id)))
+			),
 		'minister_id',
+		array(
+				'label' => "Minister name",
+				'type' => "raw",
+				'value' => CHtml::link($model->minister->person->name, $this->createAbsoluteUrl('ministers/view', array('id'=>$model->minister_id)))
+			),
 		'timestamp',
+		'answer',
 	),
 )); ?>
