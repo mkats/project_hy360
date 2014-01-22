@@ -14,6 +14,20 @@
 	// See class documentation of CActiveForm for details on this.
 	'enableAjaxValidation'=>false,
 )); ?>
+	
+	<?php
+		// retrieve all party leaders
+		$criteria = new CDbCriteria;
+		$criteria->order = 'party_leader_id ASC';
+		$party_leaders = PartyLeaders::model()->findAll($criteria);
+		$data['party_leaders'] = CHtml::listData($party_leaders, 'party_leader_id', 'person.name');
+		
+		// retrieve all parties
+		$criteria = new CDbCriteria;
+		$criteria->order = 'name ASC';
+		$parties = Parties::model()->findAll($criteria);
+		$data['parties'] = CHtml::listData($parties, 'party_id', 'name');
+		?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
@@ -21,13 +35,13 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'party_leader_id'); ?>
-		<?php echo $form->textField($model,'party_leader_id',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->dropDownList($model,'party_leader_id', $data['party_leaders'], array('prompt'=>'Select party leader')); ?>
 		<?php echo $form->error($model,'party_leader_id'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'party_id'); ?>
-		<?php echo $form->textField($model,'party_id',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->dropDownList($model,'party_id', $data['parties'], array('prompt'=>'Select party')); ?>
 		<?php echo $form->error($model,'party_id'); ?>
 	</div>
 

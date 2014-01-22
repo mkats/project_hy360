@@ -47,7 +47,9 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'columns'=>array(
 		'leads_id',
 		'party_leader_id',
+		"partyLeader.person.name",
 		'party_id',
+		"party.name",
 		'start_timestamp',
 		'end_timestamp',
 		array(

@@ -12,9 +12,17 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('party_leader_id')); ?>:</b>
 	<?php echo CHtml::encode($data->party_leader_id); ?>
 	<br />
+	
+	<b><?php echo CHtml::encode($data->getAttributeLabel('partyLeader.person.name')); ?>:</b>
+	<?php echo CHtml::link($data->partyLeader->person->name, $this->createAbsoluteUrl('partyLeaders/view', array('id'=>$data->party_leader_id))) ?>
+	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('party_id')); ?>:</b>
 	<?php echo CHtml::encode($data->party_id); ?>
+	<br />
+	
+	<b><?php echo CHtml::encode($data->getAttributeLabel('person.name')); ?>:</b>
+	<?php echo CHtml::link($data->party->name, $this->createAbsoluteUrl('parties/view', array('id'=>$data->party_id))) ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('start_timestamp')); ?>:</b>
