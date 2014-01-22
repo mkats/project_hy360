@@ -7,6 +7,7 @@
  * @property string $participate_id
  * @property string $party_id
  * @property string $parliament_cycle_id
+ * @property double $electoral_percentage
  *
  * The followings are the available model relations:
  * @property ParliamentCycles $parliamentCycle
@@ -30,10 +31,11 @@ class Participate extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+			array('electoral_percentage', 'numerical'),
 			array('party_id, parliament_cycle_id', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('participate_id, party_id, parliament_cycle_id', 'safe', 'on'=>'search'),
+			array('participate_id, party_id, parliament_cycle_id, electoral_percentage', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -59,6 +61,7 @@ class Participate extends CActiveRecord
 			'participate_id' => 'Participate',
 			'party_id' => 'Party',
 			'parliament_cycle_id' => 'Parliament Cycle',
+			'electoral_percentage' => 'Electoral Percentage',
 		);
 	}
 
@@ -83,6 +86,7 @@ class Participate extends CActiveRecord
 		$criteria->compare('participate_id',$this->participate_id,true);
 		$criteria->compare('party_id',$this->party_id,true);
 		$criteria->compare('parliament_cycle_id',$this->parliament_cycle_id,true);
+		$criteria->compare('electoral_percentage',$this->electoral_percentage);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

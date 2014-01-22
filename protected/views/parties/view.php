@@ -23,6 +23,5 @@ $this->menu=array(
 	'attributes'=>array(
 		'party_id',
 		'name',
-		'electoral_percentage',
 	),
 )); ?>

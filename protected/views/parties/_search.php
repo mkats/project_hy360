@@ -21,11 +21,6 @@
 		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>100)); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->label($model,'electoral_percentage'); ?>
-		<?php echo $form->textField($model,'electoral_percentage'); ?>
-	</div>
-
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Search'); ?>
 	</div>

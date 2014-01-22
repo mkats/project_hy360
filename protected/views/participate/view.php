@@ -24,9 +24,9 @@ $this->menu=array(
 		'participate_id',
 		'party_id',
 		array(
-					'label' => "Party name",
-					'type' => "raw",
-					'value' => CHtml::link($model->party->name, $this->createAbsoluteUrl('parties/view', array('id'=>$model->party_id)))
+				'label' => "Party name",
+				'type' => "raw",
+				'value' => CHtml::link($model->party->name, $this->createAbsoluteUrl('parties/view', array('id'=>$model->party_id)))
 			),
 		'parliament_cycle_id',
 		array(
@@ -34,5 +34,6 @@ $this->menu=array(
 					'type' => "raw",
 					'value' => CHtml::link($model->parliamentCycle->title, $this->createAbsoluteUrl('parliamentCycles/view', array('id'=>$model->parliament_cycle_id)))
 			),
+		'electoral_percentage',
 	),
 )); ?>

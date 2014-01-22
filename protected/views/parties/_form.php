@@ -25,12 +25,6 @@
 		<?php echo $form->error($model,'name'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'electoral_percentage'); ?>
-		<?php echo $form->textField($model,'electoral_percentage'); ?>
-		<?php echo $form->error($model,'electoral_percentage'); ?>
-	</div>
-
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>

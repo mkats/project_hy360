@@ -26,6 +26,11 @@
 		<?php echo $form->textField($model,'parliament_cycle_id',array('size'=>10,'maxlength'=>10)); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->label($model,'electoral_percentage'); ?>
+		<?php echo $form->textField($model,'electoral_percentage'); ?>
+	</div>
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Search'); ?>
 	</div>

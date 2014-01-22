@@ -14,7 +14,7 @@
 	// See class documentation of CActiveForm for details on this.
 	'enableAjaxValidation'=>false,
 )); ?>
-	
+
 	<?php
 		// retrieve all parties
 		$criteria = new CDbCriteria;
@@ -45,6 +45,12 @@
 		<?php echo $form->labelEx($model,'parliament_cycle_id'); ?>
 		<?php echo $form->dropDownList($model,'parliament_cycle_id', $data['parliament_cycles'], array('prompt'=>'Select parliament cycle')); ?>
 		<?php echo $form->error($model,'parliament_cycle_id'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'electoral_percentage'); ?>
+		<?php echo $form->textField($model,'electoral_percentage'); ?>
+		<?php echo $form->error($model,'electoral_percentage'); ?>
 	</div>
 
 	<div class="row buttons">

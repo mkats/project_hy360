@@ -6,7 +6,6 @@
  * The followings are the available columns in table 'parties':
  * @property string $party_id
  * @property string $name
- * @property double $electoral_percentage
  *
  * The followings are the available model relations:
  * @property Belongs[] $belongs
@@ -32,11 +31,10 @@ class Parties extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('electoral_percentage', 'numerical'),
 			array('name', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('party_id, name, electoral_percentage', 'safe', 'on'=>'search'),
+			array('party_id, name', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -63,7 +61,6 @@ class Parties extends CActiveRecord
 		return array(
 			'party_id' => 'Party',
 			'name' => 'Name',
-			'electoral_percentage' => 'Electoral Percentage',
 		);
 	}
 
@@ -87,7 +84,6 @@ class Parties extends CActiveRecord
 
 		$criteria->compare('party_id',$this->party_id,true);
 		$criteria->compare('name',$this->name,true);
-		$criteria->compare('electoral_percentage',$this->electoral_percentage);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

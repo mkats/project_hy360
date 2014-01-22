@@ -13,9 +13,5 @@
 	<?php echo CHtml::encode($data->name); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('electoral_percentage')); ?>:</b>
-	<?php echo CHtml::encode($data->electoral_percentage); ?>
-	<br />
-
 
 </div>
