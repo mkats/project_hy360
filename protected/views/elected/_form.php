@@ -18,11 +18,17 @@
 	<?php
 		// retrieve all MPs
 		$criteria = new CDbCriteria;
-		//$criteria->order = 'name ASC';
+		$criteria->order = 'mp_id ASC';
 		$mps = Mps::model()->findAll($criteria);
+		/*$criteria->order = array(
+                'attributes'=>array(
+                    'parent_search'=>array(
+                        'asc'=>'person.name ASC'
+				)));*/
 		$data['mps'] = CHtml::listData($mps, 'mp_id', 'person.name');
 		
 		// retrieve all parliament cycles
+		$criteria = new CDbCriteria;
 		$parliament_cycles = ParliamentCycles::model()->findAll($criteria);
 		//print_r($parliament_cycles);
 		$data['parliament_cycles'] = CHtml::listData($parliament_cycles, 'parliament_cycle_id', 'title');

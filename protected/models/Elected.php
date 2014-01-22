@@ -64,7 +64,7 @@ class Elected extends CActiveRecord
 			'mp_id' => 'Mp',
 			'parliament_cycle_id' => 'Parliament Cycle',
 			'constituency' => 'The electoral district from where the Parliament member was elected.',
-			'independence_timestamp' => 'If this attribute is null, the MP is still belonging to the party with which he was elected. If it has a non-NULL value, this MP has left its party on the specific datetime.',
+			'independence_timestamp' => 'Independence timestamp',
 		);
 	}
 
