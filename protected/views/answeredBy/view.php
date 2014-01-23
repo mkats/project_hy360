@@ -3,16 +3,16 @@
 /* @var $model AnsweredBy */
 
 $this->breadcrumbs=array(
-	'Answered Bies'=>array('index'),
+	Yii::t('app','Answered Bies')=>array('index'),
 	$model->answered_by_id,
 );
 
 $this->menu=array(
-	array('label'=>'List AnsweredBy', 'url'=>array('index')),
-	array('label'=>'Create AnsweredBy', 'url'=>array('create')),
-	array('label'=>'Update AnsweredBy', 'url'=>array('update', 'id'=>$model->answered_by_id)),
-	array('label'=>'Delete AnsweredBy', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->answered_by_id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage AnsweredBy', 'url'=>array('admin')),
+	array('label'=>Yii::t('app','List AnsweredBy'), 'url'=>array('index')),
+	array('label'=>Yii::t('app','Create AnsweredBy'), 'url'=>array('create')),
+	array('label'=>Yii::t('app','Update AnsweredBy'), 'url'=>array('update', 'id'=>$model->answered_by_id)),
+	array('label'=>Yii::t('app','Delete AnsweredBy'), 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->answered_by_id),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>Yii::t('app','Manage AnsweredBy'), 'url'=>array('admin')),
 );
 ?>
 

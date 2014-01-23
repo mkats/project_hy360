@@ -3,16 +3,16 @@
 /* @var $model AnsweredBy */
 
 $this->breadcrumbs=array(
-	'Answered Bies'=>array('index'),
-	'Create',
+	Yii::t('app','Answered Bies')=>array('index'),
+	Yii::t('app','Create'),
 );
 
 $this->menu=array(
-	array('label'=>'List AnsweredBy', 'url'=>array('index')),
-	array('label'=>'Manage AnsweredBy', 'url'=>array('admin')),
+	array('label'=>Yii::t('app','List AnsweredBy'), 'url'=>array('index')),
+	array('label'=>Yii::t('app','Manage AnsweredBy'), 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create AnsweredBy</h1>
+<h1><?php echo Yii::t('app','Create AnsweredBy') ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
