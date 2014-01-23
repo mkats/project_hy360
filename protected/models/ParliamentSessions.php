@@ -57,9 +57,9 @@ class ParliamentSessions extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'parliament_session_id' => 'Parliament Session',
-			'timestamp' => 'Timestamp',
-			'parliament_cycle_id' => 'Parliament Cycle',
+			'parliament_session_id' => Yii::t('app','model.parliamentSession.id'), //'Parliament Session',
+			'timestamp' => Yii::t('app','model.parliamentSession.timestamp'), //'Timestamp',
+			'parliament_cycle_id' => Yii::t('app','model.parliamentSession.parliamentCycle'), //'Parliament Cycle',
 		);
 	}
 

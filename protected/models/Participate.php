@@ -58,10 +58,10 @@ class Participate extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'participate_id' => 'Participate',
-			'party_id' => 'Party',
-			'parliament_cycle_id' => 'Parliament Cycle',
-			'electoral_percentage' => 'Electoral Percentage',
+			'participate_id' => Yii::t('app','model.participate.id'), //'Participate',
+			'party_id' => Yii::t('app','model.participate.party'), //'Party',
+			'parliament_cycle_id' => Yii::t('app','model.participate.parliamentCycle'), //'Parliament Cycle',
+			'electoral_percentage' => Yii::t('app','model.participate.electoralPercentage'), //'Electoral Percentage',
 		);
 	}
 

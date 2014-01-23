@@ -62,10 +62,10 @@ class ParliamentCycles extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'parliament_cycle_id' => 'Parliament Cycle',
-			'title' => 'Title',
-			'start_timestamp' => 'Start Timestamp',
-			'end_timestamp' => 'End Timestamp',
+			'parliament_cycle_id' => Yii::t('app','model.parliamentCycle.id'), //'Parliament Cycle',
+			'title' => Yii::t('app','model.parliamentCycle.title'), //'Title',
+			'start_timestamp' => Yii::t('app','model.parliamentCycle.startTimestamp'), //'Start Timestamp',
+			'end_timestamp' => Yii::t('app','model.parliamentCycle.endTimestamp'), //'End Timestamp',
 		);
 	}
 

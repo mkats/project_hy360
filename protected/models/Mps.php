@@ -60,8 +60,8 @@ class Mps extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'mp_id' => 'Mp',
-			'person_id' => 'Person',
+			'mp_id' => Yii::t('app','model.mp.id'), //'Mp',
+			'person_id' => Yii::t('app','model.mp.person'), //'Person',
 		);
 	}
 

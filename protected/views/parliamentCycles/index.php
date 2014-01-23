@@ -3,16 +3,16 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Parliament Cycles',
+	Yii::t('app','Parliament Cycles'),
 );
 
 $this->menu=array(
-	array('label'=>'Create ParliamentCycles', 'url'=>array('create')),
-	array('label'=>'Manage ParliamentCycles', 'url'=>array('admin')),
+	array('label'=>Yii::t('app','Create ParliamentCycles'), 'url'=>array('create')),
+	array('label'=>Yii::t('app','Manage ParliamentCycles'), 'url'=>array('admin')),
 );
 ?>
 
-<h1>Parliament Cycles</h1>
+<h1><?php echo Yii::t('app','Parliament Cycles') ?></h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

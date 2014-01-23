@@ -3,16 +3,16 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Parties',
+	Yii::t('app','Parties'),
 );
 
 $this->menu=array(
-	array('label'=>'Create Parties', 'url'=>array('create')),
-	array('label'=>'Manage Parties', 'url'=>array('admin')),
+	array('label'=>Yii::t('app','Create Parties'), 'url'=>array('create')),
+	array('label'=>Yii::t('app','Manage Parties'), 'url'=>array('admin')),
 );
 ?>
 
-<h1>Parties</h1>
+<h1><?php echo Yii::t('app','Parties') ?></h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

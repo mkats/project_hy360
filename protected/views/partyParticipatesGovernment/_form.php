@@ -35,18 +35,18 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'party_id'); ?>
-		<?php echo $form->dropDownList($model,'party_id', $data['parties'], array('prompt'=>'Select party')); ?>
+		<?php echo $form->dropDownList($model,'party_id', $data['parties'], array('prompt'=>Yii::t('app','Select party'))); ?>
 		<?php echo $form->error($model,'party_id'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'government_id'); ?>
-		<?php echo $form->dropDownList($model,'government_id', $data['governments'], array('prompt'=>'Select government')); ?>
+		<?php echo $form->dropDownList($model,'government_id', $data['governments'], array('prompt'=>Yii::t('app','Select government'))); ?>
 		<?php echo $form->error($model,'government_id'); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? Yii::t('app','Create') : Yii::t('app','Save')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

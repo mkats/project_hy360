@@ -60,9 +60,9 @@ class Governments extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'government_id' => 'Government',
-			'parliament_cycle_id' => 'Parliament Cycle',
-			'prime_minister_id' => 'Prime Minister',
+			'government_id' => Yii::t('app','model.government.id'), //'Government',
+			'parliament_cycle_id' => Yii::t('app','model.government.parliamentCycle'), //'Parliament Cycle',
+			'prime_minister_id' => Yii::t('app','model.government.primeMinister'), //'Prime Minister',
 		);
 	}
 

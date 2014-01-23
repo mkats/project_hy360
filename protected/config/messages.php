@@ -2,6 +2,9 @@
 /**
  * This is the configuration for generating message translations
  * for the Yii framework. It is used by the 'yiic message' command.
+ * 
+ * > cd c:\xampp\htdocs\sites\project_hy360
+ * > yiic message protected\config\messages.php
  */
 return array(
 	'sourcePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',

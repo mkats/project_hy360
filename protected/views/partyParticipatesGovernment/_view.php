@@ -13,7 +13,7 @@
 	<?php echo CHtml::encode($data->party_id); ?>
 	<br />
 	
-	<b><?php echo CHtml::encode($data->getAttributeLabel('party name')); ?>:</b>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('party.name')); ?>:</b>
 	<?php echo CHtml::link($data->party->name, $this->createAbsoluteUrl('parties/view', array('id'=>$data->party_id))) ?>
 	<br />
 	

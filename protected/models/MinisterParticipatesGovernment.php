@@ -59,11 +59,11 @@ class MinisterParticipatesGovernment extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'minister_participates_government_id' => 'Minister Participates Government',
-			'minister_id' => 'Minister',
-			'government_id' => 'Government',
-			'start_timestamp' => 'Start Timestamp',
-			'end_timestamp' => 'End Timestamp',
+			'minister_participates_government_id' => Yii::t('app','model.ministerParticipatesGovernment.id'), //'Minister Participates Government',
+			'minister_id' => Yii::t('app','model.ministerParticipatesGovernment.minister'), //'Minister',
+			'government_id' => Yii::t('app','model.ministerParticipatesGovernment.government'), //'Government',
+			'start_timestamp' => Yii::t('app','model.ministerParticipatesGovernment.startTimestamp'), //'Start Timestamp',
+			'end_timestamp' => Yii::t('app','model.ministerParticipatesGovernment.endTimestamp'), //'End Timestamp',
 		);
 	}
 

@@ -59,8 +59,8 @@ class Parties extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'party_id' => 'Party',
-			'name' => 'Name',
+			'party_id' => Yii::t('app','model.party.id'), //'Party',
+			'name' => Yii::t('app','model.party.name'), //'Name',
 		);
 	}
 

@@ -60,11 +60,11 @@ class Elected extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'elected_id' => 'Elected',
-			'mp_id' => 'Mp',
-			'parliament_cycle_id' => 'Parliament Cycle',
-			'constituency' => 'The electoral district from where the Parliament member was elected.',
-			'independence_timestamp' => 'Independence timestamp',
+			'elected_id' => Yii::t('app','model.elected.id'), //'Elected',
+			'mp_id' => Yii::t('app','model.elected.mp'), //'Mp',
+			'parliament_cycle_id' => Yii::t('app','model.elected.parliamentCycle'), //'Parliament Cycle',
+			'constituency' => Yii::t('app','model.elected.constituency'), //'The electoral district from where the Parliament member was elected.',
+			'independence_timestamp' => Yii::t('app','model.elected.independenceTimestamp'), //'Independence timestamp',
 		);
 	}
 

@@ -65,10 +65,10 @@ class Persons extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'person_id' => Yii::t('app','model.person.id'), //'Person',
-			'name' => Yii::t('app','model.person.name'), //'Name',
-			'age' => Yii::t('app','model.person.age'), //'Age',
-			'sex' => Yii::t('app','model.person.sex'), //'Sex',
+			'person_id' => Yii::t('app','model.person.id'),
+			'name' => Yii::t('app','model.person.name'),
+			'age' => Yii::t('app','model.person.age'),
+			'sex' => Yii::t('app','model.person.sex'),
 		);
 	}
 

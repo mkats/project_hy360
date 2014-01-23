@@ -35,13 +35,13 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'mp_id'); ?>
-		<?php echo $form->dropDownList($model,'mp_id', $data['mps'], array('prompt'=>'Select MP')); ?>
+		<?php echo $form->dropDownList($model,'mp_id', $data['mps'], array('prompt'=>Yii::t('app','Select MP'))); ?>
 		<?php echo $form->error($model,'mp_id'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'party_id'); ?>
-		<?php echo $form->dropDownList($model,'party_id', $data['parties'], array('prompt'=>'Select party')); ?>
+		<?php echo $form->dropDownList($model,'party_id', $data['parties'], array('prompt'=>Yii::t('app','Select party'))); ?>
 		<?php echo $form->error($model,'party_id'); ?>
 	</div>
 
@@ -58,7 +58,7 @@
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? Yii::t('app','Create') : Yii::t('app','Save')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

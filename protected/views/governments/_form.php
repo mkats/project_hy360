@@ -36,18 +36,18 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'parliament_cycle_id'); ?>
-		<?php echo $form->dropDownList($model,'parliament_cycle_id', $data['parliament_cycles'], array('prompt'=>'Select parliament cycle')); ?>
+		<?php echo $form->dropDownList($model,'parliament_cycle_id', $data['parliament_cycles'], array('prompt'=>Yii::t('app','Select parliament cycle'))); ?>
 		<?php echo $form->error($model,'parliament_cycle_id'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'prime_minister_id'); ?>
-		<?php echo $form->dropDownList($model,'prime_minister_id', $data['prime_ministers'], array('prompt'=>'Select parliament cycle')); ?>
+		<?php echo $form->dropDownList($model,'prime_minister_id', $data['prime_ministers'], array('prompt'=>Yii::t('app','Select parliament cycle'))); ?>
 		<?php echo $form->error($model,'prime_minister_id'); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? Yii::t('app','Create') : Yii::t('app','Save')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

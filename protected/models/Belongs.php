@@ -59,11 +59,11 @@ class Belongs extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'belongs_id' => 'Belongs',
-			'mp_id' => 'Mp',
-			'party_id' => 'Party',
-			'start_timestamp' => 'Start Timestamp',
-			'end_timestamp' => 'End Timestamp',
+			'belongs_id' => Yii::t('app','model.belongs.id'), //'Belongs',
+			'mp_id' => Yii::t('app','model.belongs.mp'), //'Mp',
+			'party_id' => Yii::t('app','model.belongs.party'), //'Party',
+			'start_timestamp' => Yii::t('app','model.belongs.startTimestamp'), //'Start Timestamp',
+			'end_timestamp' => Yii::t('app','model.belongs.endTimestamp'), //'End Timestamp',
 		);
 	}
 

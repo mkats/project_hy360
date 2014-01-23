@@ -47,18 +47,18 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'parliament_session_id'); ?>
-		<?php echo $form->dropDownList($model,'parliament_session_id', $data['parliament_sessions'], array('prompt'=>'Select parliament session')); ?>
+		<?php echo $form->dropDownList($model,'parliament_session_id', $data['parliament_sessions'], array('prompt'=>Yii::t('app','Select parliament session'))); ?>
 		<?php echo $form->error($model,'parliament_session_id'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'mp_id'); ?>
-		<?php echo $form->dropDownList($model,'mp_id', $data['mps'], array('prompt'=>'Select MP')); ?>
+		<?php echo $form->dropDownList($model,'mp_id', $data['mps'], array('prompt'=>Yii::t('app','Select MP'))); ?>
 		<?php echo $form->error($model,'mp_id'); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? Yii::t('app','Create') : Yii::t('app','Save')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

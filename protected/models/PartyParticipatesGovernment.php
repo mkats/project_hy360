@@ -56,9 +56,9 @@ class PartyParticipatesGovernment extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'party_participates_government_id' => 'Party Participates Government',
-			'party_id' => 'Party',
-			'government_id' => 'Government',
+			'party_participates_government_id' => Yii::t('app','model.partyParticipatesGovernment.id'), //'Party Participates Government',
+			'party_id' => Yii::t('app','model.partyParticipatesGovernment.party'), //'Party',
+			'government_id' => Yii::t('app','model.partyParticipatesGovernment.government'), //'Government',
 		);
 	}
 

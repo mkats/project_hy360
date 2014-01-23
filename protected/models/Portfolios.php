@@ -58,11 +58,11 @@ class Portfolios extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'portfolio_id' => 'Portfolio',
-			'subject' => 'Subject',
-			'start_timestamp' => 'Start Timestamp',
-			'end_timestamp' => 'End Timestamp',
-			'minister_id' => 'Minister',
+			'portfolio_id' => Yii::t('app','model.portfolio.id'), //'Portfolio',
+			'subject' => Yii::t('app','model.portfolio.subject'), //'Subject',
+			'start_timestamp' => Yii::t('app','model.portfolio.startTimestamp'), //'Start Timestamp',
+			'end_timestamp' => Yii::t('app','model.portfolio.endTimestamp'), //'End Timestamp',
+			'minister_id' => Yii::t('app','model.portfolio,minister'), //'Minister',
 		);
 	}
 

@@ -62,11 +62,11 @@ class Interpellations extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'interpellation_id' => 'Interpellation',
-			'description' => 'Description',
-			'category' => 'Category',
-			'parliament_session_id' => 'Parliament Session',
-			'mp_id' => 'Mp',
+			'interpellation_id' => Yii::t('app','model.interpellation.id'), //'Interpellation',
+			'description' => Yii::t('app','model.interpellation.description'), //'Description',
+			'category' => Yii::t('app','model.interpellation.category'), //'Category',
+			'parliament_session_id' => Yii::t('app','model.interpellation.parliamentSession'), //'Parliament Session',
+			'mp_id' => Yii::t('app','model.interpellation.mp'), //'Mp',
 		);
 	}
 

@@ -3,16 +3,16 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Belongs',
+	Yii::t('app','Belongs'),
 );
 
 $this->menu=array(
-	array('label'=>'Create Belongs', 'url'=>array('create')),
-	array('label'=>'Manage Belongs', 'url'=>array('admin')),
+	array('label'=>Yii::t('app','Create Belongs'), 'url'=>array('create')),
+	array('label'=>Yii::t('app','Manage Belongs'), 'url'=>array('admin')),
 );
 ?>
 
-<h1>Belongs</h1>
+<h1><?php Yii::t('app','Belongs') ?> </h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

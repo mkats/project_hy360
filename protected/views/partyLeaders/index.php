@@ -3,16 +3,16 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Party Leaders',
+	Yii::t('app','Party Leaders'),
 );
 
 $this->menu=array(
-	array('label'=>'Create PartyLeaders', 'url'=>array('create')),
-	array('label'=>'Manage PartyLeaders', 'url'=>array('admin')),
+	array('label'=>Yii::t('app','Create PartyLeaders'), 'url'=>array('create')),
+	array('label'=>Yii::t('app','Manage PartyLeaders'), 'url'=>array('admin')),
 );
 ?>
 
-<h1>Party Leaders</h1>
+<h1><?php echo Yii::t('app','Party Leaders') ?></h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

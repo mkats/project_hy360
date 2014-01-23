@@ -60,11 +60,11 @@ class AnsweredBy extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'answered_by_id' => 'Answered By',
-			'interpellation_id' => 'Interpellation',
-			'minister_id' => 'Minister',
-			'timestamp' => 'Timestamp',
-			'answer' => 'Answer',
+			'answered_by_id' => Yii::t('app','model.answeredBy.id'),
+			'interpellation_id' => Yii::t('app','model.answeredBy.interpellation'),
+			'minister_id' => Yii::t('app','model.answeredBy.minister'),
+			'timestamp' => Yii::t('app','model.answeredBy.timestamp'),
+			'answer' => Yii::t('app','model.answeredBy.answer'),
 		);
 	}
 

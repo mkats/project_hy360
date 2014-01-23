@@ -60,8 +60,8 @@ class Ministers extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'minister_id' => 'Minister',
-			'person_id' => 'Person',
+			'minister_id' => Yii::t('app','model.minister.id'), //'Minister',
+			'person_id' => Yii::t('app','model.minister.person'), //'Person',
 		);
 	}
 

@@ -17,7 +17,7 @@
 	<?php echo CHtml::encode($data->parliament_cycle_id); ?>
 	<br />
 	
-	<b><?php echo CHtml::encode("Parliament cycle name"/*$data->getAttributeLabel('person.name')*/); ?>:</b>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('parliamentCycle.title')); ?>:</b>
 	<?php echo CHtml::link($data->parliamentCycle->title, $this->createAbsoluteUrl('ParliamentCycles/view', array('id'=>$data->parliament_cycle_id))) ?>
 	<br />
 

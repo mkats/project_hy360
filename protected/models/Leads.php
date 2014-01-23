@@ -59,11 +59,11 @@ class Leads extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'leads_id' => 'Leads',
-			'party_leader_id' => 'Party Leader',
-			'party_id' => 'Party',
-			'start_timestamp' => 'Start Timestamp',
-			'end_timestamp' => 'End Timestamp',
+			'leads_id' => Yii::t('app','model.leads.id'), //'Leads',
+			'party_leader_id' => Yii::t('app','model.leads.partyLeader'), //'Party Leader',
+			'party_id' => Yii::t('app','model.leads.party'), //'Party',
+			'start_timestamp' => Yii::t('app','model.leads.startTimestamp'), //'Start Timestamp',
+			'end_timestamp' => Yii::t('app','model.leads.endTimestamp'), //'End Timestamp',
 		);
 	}
 

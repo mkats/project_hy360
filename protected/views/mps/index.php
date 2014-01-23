@@ -3,16 +3,16 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Mps',
+	Yii::t('app','Mps'),
 );
 
 $this->menu=array(
-	array('label'=>'Create Mps', 'url'=>array('create')),
-	array('label'=>'Manage Mps', 'url'=>array('admin')),
+	array('label'=>Yii::t('app','Create Mps'), 'url'=>array('create')),
+	array('label'=>Yii::t('app','Manage Mps'), 'url'=>array('admin')),
 );
 ?>
 
-<h1>Mps</h1>
+<h1><?php echo Yii::t('app','Mps') ?></h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

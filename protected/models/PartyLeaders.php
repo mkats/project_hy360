@@ -56,8 +56,8 @@ class PartyLeaders extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'party_leader_id' => 'Party Leader',
-			'person_id' => 'Person',
+			'party_leader_id' => Yii::t('app','model.partyLeader.id'), //'Party Leader',
+			'person_id' => Yii::t('app','model.partyLeader.person'), //'Person',
 		);
 	}
 

@@ -3271,3 +3271,19 @@ Stack trace:
 REQUEST_URI=/sites/project_hy360/index.php?r=AnsweredBy/index
 HTTP_REFERER=http://localhost/sites/project_hy360/index.php?r=site/index
 ---
+2014/01/23 21:24:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "minister/create".' in C:\xampp\htdocs\sites\yii-1.1.14.f0fee9\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\sites\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('minister/create')
+#1 C:\xampp\htdocs\sites\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sites\project_hy360\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/project_hy360/index.php?r=minister/create
+---
+2014/01/23 21:24:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ministerσ/create".' in C:\xampp\htdocs\sites\yii-1.1.14.f0fee9\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\sites\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('minister??/crea...')
+#1 C:\xampp\htdocs\sites\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\sites\project_hy360\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sites/project_hy360/index.php?r=minister%CF%83/create
+---

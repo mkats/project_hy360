@@ -3,16 +3,16 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Party Participates Governments',
+	Yii::t('app','Party Participates Governments'),
 );
 
 $this->menu=array(
-	array('label'=>'Create PartyParticipatesGovernment', 'url'=>array('create')),
-	array('label'=>'Manage PartyParticipatesGovernment', 'url'=>array('admin')),
+	array('label'=>Yii::t('app','Create PartyParticipatesGovernment'), 'url'=>array('create')),
+	array('label'=>Yii::t('app','Manage PartyParticipatesGovernment'), 'url'=>array('admin')),
 );
 ?>
 
-<h1>Party Participates Governments</h1>
+<h1><?php echo Yii::t('app','Party Participates Governments') ?></h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

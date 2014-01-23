@@ -3,16 +3,16 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Portfolioses',
+	Yii::t('app','Portfolioses'),
 );
 
 $this->menu=array(
-	array('label'=>'Create Portfolios', 'url'=>array('create')),
-	array('label'=>'Manage Portfolios', 'url'=>array('admin')),
+	array('label'=>Yii::t('app','Create Portfolios'), 'url'=>array('create')),
+	array('label'=>Yii::t('app','Manage Portfolios'), 'url'=>array('admin')),
 );
 ?>
 
-<h1>Portfolioses</h1>
+<h1><?php echo Yii::t('app','Portfolioses') ?></h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

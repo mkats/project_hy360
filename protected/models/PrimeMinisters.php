@@ -56,8 +56,8 @@ class PrimeMinisters extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'prime_minister_id' => 'Prime Minister',
-			'person_id' => 'Person',
+			'prime_minister_id' => Yii::t('app','model.primeMinister.id'), //'Prime Minister',
+			'person_id' => Yii::t('app','model.primeMinister.person'), //'Person',
 		);
 	}
 

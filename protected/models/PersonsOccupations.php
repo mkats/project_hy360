@@ -56,10 +56,10 @@ class PersonsOccupations extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'persons_occupations_id' => 'Persons Occupations',
-			'subject' => 'The subject category of this occupation',
-			'person_id' => 'Person',
-			'occupation' => 'Occupation',
+			'persons_occupations_id' => Yii::t('app','model.personsOccupation.id'), //'Persons Occupations',
+			'subject' => Yii::t('app','model.personsOccupation.subject'), //'The subject category of this occupation',
+			'person_id' => Yii::t('app','model.personsOccupation.person'), //'Person',
+			'occupation' => Yii::t('app','model.personsOccupation.occupation'), //'Occupation',
 		);
 	}
 

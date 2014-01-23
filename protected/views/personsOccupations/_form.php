@@ -41,12 +41,12 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'person_id'); ?>
-		<?php echo $form->dropDownList($model,'person_id', $data['persons'], array('prompt'=>'Select person')); ?>
+		<?php echo $form->dropDownList($model,'person_id', $data['persons'], array('prompt'=>Yii::t('app','Select person'))); ?>
 		<?php echo $form->error($model,'person_id'); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? Yii::t('app','Create') : Yii::t('app','Save')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
