@@ -24,7 +24,7 @@
 	
 		// retrieve all MPs
 		$criteria = new CDbCriteria;
-		//$criteria->order = 'name ASC';
+		$criteria->order = 'mp_id ASC';
 		$mps = Mps::model()->findAll($criteria);
 		$data['mps'] = CHtml::listData($mps, 'mp_id', 'person.name');
 		?>
