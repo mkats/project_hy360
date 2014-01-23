@@ -14,7 +14,7 @@
 	// See class documentation of CActiveForm for details on this.
 	'enableAjaxValidation'=>false,
 )); ?>
-	
+
 	<?php
 		// retrieve all parliament_sessions
 		$criteria = new CDbCriteria;
@@ -43,12 +43,6 @@
 		<?php echo $form->labelEx($model,'category'); ?>
 		<?php echo $form->textField($model,'category',array('size'=>50,'maxlength'=>50)); ?>
 		<?php echo $form->error($model,'category'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'timestamp'); ?>
-		<?php echo $form->textField($model,'timestamp'); ?>
-		<?php echo $form->error($model,'timestamp'); ?>
 	</div>
 
 	<div class="row">

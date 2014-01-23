@@ -24,7 +24,6 @@ $this->menu=array(
 		'interpellation_id',
 		'description',
 		'category',
-		'timestamp',
 		'parliament_session_id',
 		array(
 				'label' => "Parliament session date",
@@ -36,6 +35,6 @@ $this->menu=array(
 				'label' => "MP name",
 				'type' => "raw",
 				'value' => CHtml::link($model->mp->person->name, $this->createAbsoluteUrl('mps/view', array('id'=>$model->mp_id)))
-			),
+	),
 	),
 )); ?>

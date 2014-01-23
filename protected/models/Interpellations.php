@@ -7,7 +7,6 @@
  * @property string $interpellation_id
  * @property string $description
  * @property string $category
- * @property string $timestamp
  * @property string $parliament_session_id
  * @property string $mp_id
  *
@@ -37,10 +36,9 @@ class Interpellations extends CActiveRecord
 			array('description', 'length', 'max'=>300),
 			array('category', 'length', 'max'=>50),
 			array('parliament_session_id, mp_id', 'length', 'max'=>10),
-			array('timestamp', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('interpellation_id, description, category, timestamp, parliament_session_id, mp_id', 'safe', 'on'=>'search'),
+			array('interpellation_id, description, category, parliament_session_id, mp_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -67,9 +65,8 @@ class Interpellations extends CActiveRecord
 			'interpellation_id' => 'Interpellation',
 			'description' => 'Description',
 			'category' => 'Category',
-			'timestamp' => 'Timestamp',
 			'parliament_session_id' => 'Parliament Session',
-			'mp_id' => 'The Member of Parliament who submitted the interpellation.',
+			'mp_id' => 'Mp',
 		);
 	}
 
@@ -94,7 +91,6 @@ class Interpellations extends CActiveRecord
 		$criteria->compare('interpellation_id',$this->interpellation_id,true);
 		$criteria->compare('description',$this->description,true);
 		$criteria->compare('category',$this->category,true);
-		$criteria->compare('timestamp',$this->timestamp,true);
 		$criteria->compare('parliament_session_id',$this->parliament_session_id,true);
 		$criteria->compare('mp_id',$this->mp_id,true);
 

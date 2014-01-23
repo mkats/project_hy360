@@ -27,11 +27,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'timestamp'); ?>
-		<?php echo $form->textField($model,'timestamp'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'parliament_session_id'); ?>
 		<?php echo $form->textField($model,'parliament_session_id',array('size'=>10,'maxlength'=>10)); ?>
 	</div>
