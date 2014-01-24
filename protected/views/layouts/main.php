@@ -23,21 +23,46 @@
 <div class="container" id="page">
 
 	<div id="header">
-		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
+		<div id="logo"><?php echo CHtml::encode(Yii::t('app','Parliament Information System')); ?></div>
 		<?php $this->widget('LangBox'); ?>
 	</div><!-- header -->
 
 	<div id="mainmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Contact', 'url'=>array('/site/contact')),
+				array('label'=>Yii::t('app','Home'), 'url'=>array('/site/index')),
+				array('label'=>Yii::t('app','About'), 'url'=>array('/site/page', 'view'=>'about')),
+				array('label'=>Yii::t('app','Contact'), 'url'=>array('/site/contact')),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>
 	</div><!-- mainmenu -->
+	<div id="secondmenu">
+		<?php $this->widget('zii.widgets.CMenu',array(
+			'items'=>array(
+				array('label'=>Yii::t('app','Answered Bies'), 'url'=>array('AnsweredBy/index')),
+				array('label'=>Yii::t('app','Belongs'), 'url'=>array('Belongs/index')),
+				array('label'=>Yii::t('app','Electeds'), 'url'=>array('Elected/index')),
+				array('label'=>Yii::t('app','Governments'), 'url'=>array('Governments/index')),
+				array('label'=>Yii::t('app','Interpellations'), 'url'=>array('Interpellations/index')),
+				array('label'=>Yii::t('app','Leads'), 'url'=>array('Leads/index')),
+				array('label'=>Yii::t('app','Minister Participates Governments'), 'url'=>array('MinisterParticipatesGovernment/index')),
+				array('label'=>Yii::t('app','Ministers'), 'url'=>array('Ministers/index')),
+				array('label'=>Yii::t('app','Mps'), 'url'=>array('Mps/index')),
+				array('label'=>Yii::t('app','Parliament Cycles'), 'url'=>array('ParliamentCycles/index')),
+				array('label'=>Yii::t('app','Parliament Sessions'), 'url'=>array('ParliamentSessions/index')),
+				array('label'=>Yii::t('app','Participates'), 'url'=>array('Participate/index')),
+				array('label'=>Yii::t('app','Parties'), 'url'=>array('Parties/index')),
+				array('label'=>Yii::t('app','Party Leaders'), 'url'=>array('PartyLeaders/index')),
+				array('label'=>Yii::t('app','Party Participates Governments'), 'url'=>array('PartyParticipatesGovernment/index')),
+				array('label'=>Yii::t('app','Persons'), 'url'=>array('Persons/index')),
+				array('label'=>Yii::t('app','Persons Occupations'), 'url'=>array('PersonsOccupations/index')),
+				array('label'=>Yii::t('app','Portfolioses'), 'url'=>array('Portfolios/index')),
+				array('label'=>Yii::t('app','Prime Ministers'), 'url'=>array('PrimeMinisters/index')),
+			),
+		)); ?>
+	</div>
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 			'links'=>$this->breadcrumbs,

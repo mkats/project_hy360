@@ -4,8 +4,11 @@ body
 	padding: 0;
 	color: #555;
 	font: normal 10pt Arial,Helvetica,sans-serif;
-	background: #EFEFEF;
+	background: #8a1f11 /*#EFEFEF*/;
 	background-image: url('../images/Vouli_2_new.jpg');
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-size: 100%;
 }
 
 #page
@@ -98,6 +101,43 @@ body
 	background-color:#EFF4FA;
 	text-decoration:none;
 }
+
+/*-- start secondary menu --*/
+#secondmenu
+{
+	/*background:white url(bg.gif) repeat-x left top;*/
+	background: #B7D6E7;
+}
+
+#secondmenu ul
+{
+	padding:6px 20px 5px 20px;
+	margin:0px;
+}
+
+#secondmenu ul li
+{
+	display: inline;
+}
+
+#secondmenu ul li a
+{
+	display:inline-block;
+	/*color:#ffffff;*/
+	background-color:transparent;
+	font-size:12px;
+	font-weight:bold;
+	text-decoration:none;
+	padding:5px 8px;
+}
+
+#secondmenu ul li a:hover, #secondmenu ul li.active a
+{
+	color: #6399cd;
+	background-color:#EFF4FA;
+	text-decoration:none;
+}
+/*-- end secondary menu --*/
 
 div.flash-error, div.flash-notice, div.flash-success
 {
