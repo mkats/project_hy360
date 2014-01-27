@@ -3,10 +3,10 @@
 /* @var $dataProvider ext.SDataProvider */
 
 $this->breadcrumbs=array(
-	'Query',
+	Yii::t('app', 'SQL Queries'),
 );
 ?>
-<h1><?php echo $this->id . '/' . $this->action->id; ?></h1>
+<h1><?php echo Yii::t('app', 'SQL Queries') ?></h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

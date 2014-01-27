@@ -17,7 +17,7 @@
  * NOTE, this file must be saved in UTF-8 encoding.
  */
 return array (
-  'SQL queries' => 'SQL επερωτήσεις',
+  'SQL Queries' => 'SQL Ερωτήματα',
   'About' => 'Σχετικά',
   'Answered Bies' => 'Απαντήσεις Επερωτήσεων',
   'Belongs' => 'Κόμματα βουλευτών',
@@ -90,6 +90,8 @@ return array (
   'Portfolioses' => 'Χαρτοφυλάκια Υπουργών',
   'Prime Minister' => 'Προθυπουργός',
   'Prime Ministers' => 'Προθυπουργοί',
+  'Queries' => 'SQL Ερωτήματα',
+  'SQL queries' => 'SQL Ερωτήματα',
   'Save' => 'Αποθήκευση',
   'Select MP' => 'Επιλογή Βουλευτή',
   'Select Parliament cycle' => 'Επιλογή Βουλευτικής περιόδου',
@@ -175,4 +177,9 @@ return array (
   'model.portfolio.subject' => 'Αντικείμενο χαρτοφυλακίου',
   'model.primeMinister.id' => 'Α.Μ. Προθυπουργού',
   'model.primeMinister.person' => 'Α.Μ. Προσώπου',
+  'model.query.brief' => 'Σύντομη Περιγραφή',
+  'model.query.id' => 'Α/Α',
+  'model.query.params' => 'Παράμετροι',
+  'model.query.sql' => 'SQL',
+  'model.query.title' => 'Τίτλος',
 );
