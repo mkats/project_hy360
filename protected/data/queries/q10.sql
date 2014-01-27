@@ -1,9 +1,9 @@
 /*
- *  Query 10
- *  
- *  @params = parliament cycle id
+ * @title MPs who have submitted interpellations with all subjects.
+ * @brief MPs who have submitted interpellations with all subjects, during a specific parliament cycle.
  *
-*/
+ * @param parliament_cycle_id: The specific parliament cycle id.
+ */
 
 SELECT tmp.name
 FROM (

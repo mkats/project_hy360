@@ -1,17 +1,24 @@
 /*
- *   Query 9
- * 
- *  Correct result:
+ * @title MPs with maximum number of submitted interpellations
+ * @brief Retrieves the names of the MPs who have submitted the maximum observed number of interpellations, and the party where they belong.
  *
+ * @param parliament_cycle_id: The specific parliament cycle id
+ * 
+ * PS : if the mp has changed party we should show in which party he belonged
+ * when he asked.
+ *
+ * Προσοχή εδώ μια επερώτηση μπορεί να έχει γίνει από βουλευτή ο οποίος άλλαξε
+ * κόμμα κατά την διάρκεια της βουλευτικής περιόδου. Οπότε πρέπει να λάβετε
+ * υπόψη σας την χρονολογία πότε έκανε την επερώτηση και σε ποιό κόμμα ανήκει σε
+ * αυτή τη χρονολογία.
+ * 
+ *  Correct result
  *  ΒΑΣΙΛΗΣ ΟΙΚΟΝΟΜΟΥ           2
  *  ΟΔΥΣΣΕΑΣ ΚΩΝΣΤΑΝΤΙΝΟΠΟΥΛΟΣ 	2
  *  ΘΕΟΔΟΣΙΟΣ ΚΩΝΣΤΑΝΤΙΝΙΔΗΣ 	2
  *  ΑΠΟΣΤΟΛΟΣ ΚΑΚΛΑΜΑΝΗΣ 	2
  *  ΔΗΜΗΤΡΗΣ ΑΝΑΓΝΩΣΤΑΚΗΣ 	2
- *
- *  @params = parliament cycle id
- *  PS : if the mp has changed party we should show in which party he belonged when he asked 
-*/
+ */
 SELECT
     mp_name, 
     party_name, 
