@@ -52,6 +52,7 @@ return array (
   'Portfolioses' => '',
   'Prime Minister' => '',
   'Prime Ministers' => '',
+  'SQL queries' => '',
   'Save' => '',
   'Select MP' => '',
   'Select Parliament cycle' => '',
