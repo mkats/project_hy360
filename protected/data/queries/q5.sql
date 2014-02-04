@@ -13,10 +13,7 @@ FROM persons p
 RIGHT JOIN ministers u ON p.person_id=u.person_id
 LEFT JOIN persons_occupations o ON o.person_id=p.person_id
 LEFT JOIN portfolios x ON x.minister_id=u.minister_id
-WHERE o.subject=x.subject
-/*
-TODO:
-WHERE
-	parliament_cycles.start_timestamp = :start_timestamp
-	AND parliament_cycles.end_timestamp = :end_timestamp
- */
+LEFT JOIN minister_participates_government mpg ON mpg.minister_id = u.minister_id
+LEFT JOIN governments gov ON gov.government_id = mpg.government_id
+LEFT JOIN parliament_cycles pc ON pc.parliament_cycle_id = gov.parliament_cycle_id
+WHERE o.subject=x.subject AND pc.start_timestamp = :start_timestamp AND pc.end_timestamp = :end_timestamp

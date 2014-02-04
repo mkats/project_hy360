@@ -26,11 +26,12 @@ FROM(
         k.name,
         count(p.person_id)/array.count AS female_percentage
 
-        FROM elected e
+        FROM elected e /* OK */
         LEFT JOIN mps v ON v.mp_id=e.mp_id
         RIGHT JOIN belongs b ON b.mp_id=v.mp_id
         LEFT JOIN persons p ON p.person_id=v.person_id
         LEFT JOIN parties k ON k.party_id=b.party_id
+		LEFT JOIN parliament_cycles pc ON pc.parliament_cycle_id=e.parliament_cycle_id
         LEFT JOIN (
             SELECT e.constituency, b.party_id ,count(p.person_id) AS count
             FROM elected e
@@ -40,6 +41,7 @@ FROM(
             GROUP BY e.constituency, b.party_id
         ) AS array ON array.constituency = e.constituency and array.party_id = b.party_id
         WHERE p.sex="Γ"
+			AND pc.parliament_cycle_id = :parliament_cycle_id
         GROUP BY e.constituency, b.party_id
     ) AS female
     LEFT JOIN (
@@ -48,11 +50,12 @@ FROM(
             e.constituency AS constituency,
             k.name AS name,
             count(p.person_id)/array.count AS male_percentage
-        FROM elected e
+        FROM elected e /* OK  */
         LEFT JOIN mps v ON v.mp_id=e.mp_id
         RIGHT JOIN belongs b ON b.mp_id=v.mp_id
         LEFT JOIN persons p ON p.person_id=v.person_id
         LEFT JOIN parties k ON k.party_id=b.party_id
+		LEFT JOIN parliament_cycles pc ON pc.parliament_cycle_id=e.parliament_cycle_id
         LEFT JOIN (
             SELECT e.constituency, b.party_id ,count(p.person_id) AS count
             FROM elected e
@@ -62,6 +65,7 @@ FROM(
             GROUP BY e.constituency, b.party_id
         ) AS array ON array.constituency = e.constituency and array.party_id = b.party_id
         WHERE p.sex="Α"
+			AND pc.parliament_cycle_id = :parliament_cycle_id
         GROUP BY e.constituency, b.party_id
     ) AS male ON male.constituency=female.constituency and male.name=female.name
 
@@ -84,11 +88,12 @@ UNION ALL
             k.name,
             count(p.person_id)/array.count AS female_percentage
 
-        FROM elected e
+        FROM elected e /* OK */
         LEFT JOIN mps v ON v.mp_id=e.mp_id
         RIGHT JOIN belongs b ON b.mp_id=v.mp_id
         LEFT JOIN persons p ON p.person_id=v.person_id
         LEFT JOIN parties k ON k.party_id=b.party_id
+		LEFT JOIN parliament_cycles pc ON pc.parliament_cycle_id=e.parliament_cycle_id
         LEFT JOIN (
             SELECT e.constituency, b.party_id ,count(p.person_id) AS count
             FROM elected e
@@ -98,6 +103,7 @@ UNION ALL
             GROUP BY e.constituency, b.party_id
         ) AS array ON array.constituency = e.constituency and array.party_id = b.party_id
         WHERE p.sex="Γ"
+			AND pc.parliament_cycle_id = :parliament_cycle_id
         GROUP BY e.constituency, b.party_id
     ) AS female
     RIGHT JOIN (
@@ -106,11 +112,12 @@ UNION ALL
             e.constituency AS constituency,
             k.name AS name,
             count(p.person_id)/array.count AS male_percentage
-        FROM elected e
+        FROM elected e /* OK */
         LEFT JOIN mps v ON v.mp_id=e.mp_id
         RIGHT JOIN belongs b ON b.mp_id=v.mp_id
         LEFT JOIN persons p ON p.person_id=v.person_id
         LEFT JOIN parties k ON k.party_id=b.party_id
+		LEFT JOIN parliament_cycles pc ON pc.parliament_cycle_id=e.parliament_cycle_id
         LEFT JOIN (
             SELECT e.constituency, b.party_id ,count(p.person_id) AS count
             FROM elected e
@@ -120,6 +127,7 @@ UNION ALL
             GROUP BY e.constituency, b.party_id
         ) AS array ON array.constituency = e.constituency and array.party_id = b.party_id
         WHERE p.sex="Α"
+			AND pc.parliament_cycle_id = :parliament_cycle_id
         GROUP BY e.constituency, b.party_id
     ) AS male ON male.constituency=female.constituency and male.name=female.name
 

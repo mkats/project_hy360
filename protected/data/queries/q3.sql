@@ -6,7 +6,6 @@
  *
  * @param parliament_cycle_title: The specific parliament cycle title
  */
-/*SET @rank=0;/* MySQL returned an empty result set (i.e. zero rows) */
 SELECT
     p.name, 
     IFNULL( k.name, "NA"  ) AS party
@@ -19,7 +18,7 @@ LEFT JOIN minister_participates_government mpg ON mpg.minister_id=u.minister_id
 LEFT JOIN governments ON governments.government_id=mpg.government_id
 LEFT JOIN parliament_cycles pc ON pc.parliament_cycle_id=governments.parliament_cycle_id
 WHERE
-	pc.title=:parliament_cycle_title
+	pc.title = :parliament_cycle_title
 	/*Below: uncomment to select only the ones currently in government*/
 	/*AND (mpg.end_timestamp="0000-00-00 00:00:00" OR mpg.end_timestamp > NOW())*/
 ORDER BY p.name ASC

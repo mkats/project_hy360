@@ -9,4 +9,6 @@ SELECT
 	i.description
 FROM interpellations i
 LEFT JOIN parliament_sessions s ON s.parliament_session_id=i.parliament_session_id
+LEFT JOIN parliament_cycles pc ON pc.parliament_cycle_id = s.parliament_cycle_id
+WHERE pc.parliament_cycle_id = :parliament_cycle_id
 ORDER BY s.timestamp DESC
